@@ -1,0 +1,102 @@
+
+* On the dichotomy between "mathematically" and "computationally" optimal. 
+  An example from the field of projection-based reduced-order models.
+
+* On the importance of jointly developing "mathematical" formulation and "computational" solutions. 
+  An example from the field of projection-based reduced-order models.
+
+Abstract: 
+---------
+
+Scientific research is typically carried out by identifying a problem of interest, 
+developing a (mathematical) formulation and, if analytical solutions are unfeasible, 
+resorting to numerical ones. Most real world problems of relevance 
+in engineering and science fall into the latter category.
+
+Sometimes, there is a disconnect between the various stages. 
+One example is when the formulation is carried out in a "bubble", 
+namely without keeping into consideration the numerical solution aspect.
+This "compartmentalization" can have a key limitation: a formulation is deemed 
+good or bad according to metrics that are applicable to and make sense in this stage.
+Any notion or conclusion about optimality drawn this way can be misleading, 
+because a problem formulation that is mathematically sound and optimal (according to some metrics) 
+does not directly translate into a computationally efficient solution.
+
+In this talk, I will present one such scenario in the context of projection-based reduced-order models (pROMs).
+pROMs are a class of surrogate models, namely methods aiming to replace 
+expensive high-fidelity models with a lower-cost, lower-fidelity counterpart. 
+To be useful, any surrogate model should meet accuracy, certification (certain guarantees 
+on the error and its bounds) and speed requirements.
+To reduce the number of degrees of freedom, pROMs rely on a projection process applied 
+directly to the equations governing the high-fidelity model. 
+A common denominator of most works on pROMs has been and still is the search for the 
+smallest approximation space (e.g., number of modes) suitable for the target problem.
+This has been and is motivated by the idea that "the smaller the subspace, the better".
+This fits the limitation mentioned above.
+
+In this talk, indeed, I will argue that a large subspace is (sometimes) not only 
+necessary for accuracy, but can also benefit the computational efficiency.
+More specifically, I will focus on linear time-invariant (LTI) systems, for which pROMs 
+can be considered very mature in terms of methodological and theoretical development. 
+I will discuss various aspects to support my statement, and finally show a numerical 
+demonstration based on the simulation of elastic seismic shear waves.
+
+
+
+
+
+
+
+
+
+
+
+
+This gap can be non-trivial, often overlooked, and can remain latent for a long period of time.
+In this talk, I will use an example from the field of projection-based reduced-order models (pROMs),
+to show the dichotomy between a mathematically intriguing and optimal (according to some metric) 
+solution and the optimal computational solution. 
+
+Accuracy ensures that the surrogate produces a sufficiently small error in target quantities of interest.
+The maximum acceptable error is typically defined by the user and is problem dependent.
+Certification ensures that the error (and its bounds) introduced 
+by the surrogate can be properly quantified and characterized.
+Speed ensures that the surrogate evaluates much more rapidly than the full-order model,
+and, in general, there is a tradeoff between speed and accuracy.
+
+
+
+- Filling the gap between applied math and HPC 
+  (An example from projection-based reduced-order models (ROMs))
+
+- Applied mathematicians should talk more to HPC developers
+  (An example from projection-based reduced-order models (ROMs))
+
+- Narrowing the gap between theoretical applied mathematics and HPC
+  (a story from projection-based reduced-order models (ROMs))
+
+- On the not-so-unlikley gap between theoretical applied mathematics and HPC
+  (with a story on how the gap was closed for projection-based reduced-order models (ROMs))
+
+- On the dichotomy between "the mathematically intriguing question" and "the " 
+
+- On the dichotomy between what a mathematicians looks for vs. an HPC practitioner   
+  A tale of two opinions
+
+- A tale of two definitions of optimality.
+  An example from the field of projection-based reduced-order models.
+
+Surrogate models aim to replace expensive high-fidelity models with a lower-cost, lower-fidelity counterpart.
+To be useful, surrogate models should meet accuracy, certification and speed requirements.
+Accuracy ensures that the surrogate produces a sufficiently small error in target quantities of interest.
+The maximum acceptable error is typically defined by the user and is problem dependent.
+Certification ensures that the error (and its bounds) introduced by the surrogate can be properly quantified and characterized.
+Speed ensures that the surrogate evaluates much more rapidly than the full-order model, and, in general, there is a tradeoff between speed and accuracy.
+
+Projection-based reduced-order models (pROMs) are a class of surrogate models that rely on a projection 
+process to reduce the number of degrees of freedom in the high-fidelity model. 
+The key feature of pROMs is that they apply a projection process directly to the equations governing 
+the high-fidelity model, thus enabling stronger guarantees. A common denominator of most previous works 
+on pROMs has been to find the smallest approximation space (e.g., number of POD modes) suitable for the target problem.
+This has been motivated by the idea that "a smaller subspace is preferable".
+
